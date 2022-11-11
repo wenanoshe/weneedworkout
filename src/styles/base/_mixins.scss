@@ -1,0 +1,30 @@
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin flex($jc: false, $ai: false, $direction: false, $gap: false) {
+  display: flex;
+
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $jc {
+    justify-content: $jc;
+  }
+  @if $ai {
+    align-items: $ai;
+  }
+  @if $gap {
+    gap: $gap;
+  }
+}
+
+@mixin spacing($gap, $direction: false) {
+  display: flex;
+  @if $direction {
+    flex-direction: $direction;
+  }
+  gap: $gap;
+}

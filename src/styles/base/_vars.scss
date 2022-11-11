@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;600;700;800&display=swap");
+
+$font: "Raleway", sans-serif;
+
+$red-500: #ff2625;
+$white: #fffafb;
+$gray: #a2a2a2;
+$black: #232323;
+
+$breakpoints: (
+  "phone": 400px,
+  "phone-wide": 480px,
+  "tablet-small": 640px,
+  "tablet": 768px,
+  "tablet-wide": 1024px,
+  "desktop": 1248px,
+  "desktop-wide": 1440px,
+);
+
+$ttf: cubic-bezier(0.65, -0.17, 0.12, 1.18); /*Transition timing function*/
+
+// Speed of animations
+$x1: 100ms;
+$x2: 200ms;
+$x3: 300ms;
