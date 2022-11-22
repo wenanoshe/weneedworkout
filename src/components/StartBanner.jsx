@@ -16,8 +16,9 @@ export const StartBanner = () => {
         </button>
       </div>
 
-      <div>
-        <img src={banner} alt="Fitnes club banner" />
+      <div className="sb__right">
+        <img src={banner} alt="Fitnes club banner" className="sb__img" />
+        <span className="sb__bgStm">Exercise</span>
       </div>
     </div>
   );

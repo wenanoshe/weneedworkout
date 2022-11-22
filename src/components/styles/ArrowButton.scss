@@ -1,0 +1,42 @@
+@use "../../styles/" as *;
+
+.arrowBtn {
+  width: max-content;
+  border: none;
+  border-radius: $radius;
+  background-color: inherit;
+
+  padding: 0.5rem;
+  @include flex(center, center);
+
+  cursor: pointer;
+
+  transition: background-color $x3;
+
+  &:hover {
+    background-color: $red-500;
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  svg {
+    fill: $red-500;
+
+    path {
+      transform: translate(-4px, -3px);
+    }
+  }
+
+  &[data-direction="left"] {
+    svg {
+      transform: rotate(0deg);
+    }
+  }
+  &[data-direction="right"] {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

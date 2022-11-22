@@ -1,11 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Raleway:wght@200;300;600;700;800&display=swap");
 
 $font: "Raleway", sans-serif;
+$font2: "Montserrat", sans-serif;
+
+$radius: 8px;
 
 $red-500: #ff2625;
 $white: #fffafb;
 $gray: #a2a2a2;
 $black: #232323;
+$yellow: #FFDF89;
+
+$alpha-1: rgba(0, 0, 0, 0.1);
+$alpha-2: rgba(0, 0, 0, 0.2);
 
 $breakpoints: (
   "phone": 400px,

@@ -1,0 +1,61 @@
+@use "../../styles/" as *;
+
+.hsb {
+  width: 100%;
+  margin-top: 6rem;
+
+  &__wrapper {
+    width: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 1.5rem;
+  }
+
+  &__scroll {
+    width: max-content;
+    padding: 2rem;
+    @include flex(false, center, false);
+  }
+
+  &__tab {
+    width: 20rem;
+    height: 20rem;
+    background-color: $white;
+    cursor: pointer;
+    transform: rotate(-10deg);
+    border-radius: $radius;
+    box-shadow: -5px 5px 5px 5px $alpha-1;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    @include flex(center, center, column, 2rem);
+    transition: transform $x3 $ttf, margin-right $x3 $ttf, box-shadow $x3 $ttf;
+
+    &:hover {
+      transform: rotate(0) translate(1rem, 1rem);
+      box-shadow: -10px 10px 10px 10px $alpha-1;
+      margin-right: 3rem;
+    }
+  }
+
+  &__img {
+    width: 50%;
+  }
+
+  /* Navigation buttons */
+
+  &__navigation {
+    width: 100%;
+    @include flex(end, center, false, 0.5rem);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    &__wrapper {
+      overflow: auto;
+    }
+  }
+}

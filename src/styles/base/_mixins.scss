@@ -28,3 +28,12 @@
   }
   gap: $gap;
 }
+
+@mixin btn_effect {
+  transition: box-shadow $x3 $ttf, transform $x3 $ttf;
+
+  &:hover {
+    box-shadow: -10px 10px 10px $alpha-2;
+    transform: translate(5px, -5px);
+  }
+}

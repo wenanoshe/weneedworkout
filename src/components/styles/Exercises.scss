@@ -1,0 +1,64 @@
+@use "../../styles/" as *;
+
+.exercises {
+  margin-bottom: 10rem;
+  text-transform: capitalize;
+  @include flex(center, center, column);
+
+  &__errorCard {
+    font-weight: bold;
+    color: $gray;
+    @include flex(center, center, column, 2rem);
+
+    img {
+      width: 200px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin: 1rem 0 3rem;
+  }
+
+  &__results {
+    @include flex(center, center, false, 2rem);
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  &__navigation {
+    @include flex(center, center, false, 2rem);
+    font-family: $font2;
+
+    svg {
+      fill: $red-500;
+      transform: translate(-3px, -2px);
+    }
+
+    button {
+      width: max-content;
+      border: none;
+      border-radius: $radius;
+      background-color: inherit;
+
+      padding: 0.5rem;
+      @include flex(center, center);
+
+      cursor: pointer;
+
+      transition: background-color $x3;
+
+      &:hover {
+        background-color: $red-500;
+
+        svg {
+          fill: $white;
+        }
+      }
+
+      &:last-child {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

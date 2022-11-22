@@ -4,12 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 2000",
+    "dev": "vite --port 2000 --host",
     "build": "vite build",
     "preview": "vite preview --port 2020"
   },
   "dependencies": {
-    "@mui/icons-material": "^5.10.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3"

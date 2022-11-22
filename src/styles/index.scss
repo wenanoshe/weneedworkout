@@ -3,12 +3,20 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-size: 1.6rem;
   font-family: $font;
-  background-color: #fffafb;
+  background-color: $white;
+  color: $black;
+  max-width: map-get($breakpoints, "desktop-wide");
+  @include flex(center);
+}
+
+#root {
+  width: 100%;
 }
 
 a {
@@ -25,6 +33,6 @@ img {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
-}
+// ::-webkit-scrollbar {
+//   width: 5px;
+// }

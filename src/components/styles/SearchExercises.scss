@@ -1,0 +1,72 @@
+@use "../../styles" as *;
+
+.searchEx {
+  margin: 0 5% 10rem;
+  @include flex(false, center, column);
+
+  &__title {
+    text-align: center;
+    width: 40rem;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  &__form {
+    width: 100%;
+    height: 5rem;
+    @include flex(false, center, row, 2rem);
+  }
+
+  &__input {
+    width: 100%;
+    height: 5rem;
+    padding: 1.5rem 1rem;
+    border: 2px solid $gray;
+    border-radius: $radius;
+    font-size: 1.6rem;
+    font-family: $font2;
+    color: $black;
+
+    transition: border-color $x3 $ttf;
+
+    &:hover,
+    &:focus {
+      border-color: $red-500;
+      outline: none;
+    }
+  }
+
+  &__btn {
+    height: 100%;
+    height: 5rem;
+    border: none;
+    border-radius: $radius;
+    padding: 2rem;
+    font-size: 1.4rem;
+    font-family: $font2;
+    font-weight: 600;
+    @include btn_effect;
+    @include flex(false, center, row, 1rem);
+    cursor: pointer;
+
+    background-color: $red-500;
+    color: $white;
+  }
+
+  &__icon {
+    fill: $white;
+    width: 20px;
+  }
+
+  @media screen and (max-width: 450px) {
+    &__form {
+      flex-direction: column;
+      margin-bottom: 4rem;
+    }
+
+    &__btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

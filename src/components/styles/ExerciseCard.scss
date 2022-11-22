@@ -1,0 +1,49 @@
+@use "../../styles/" as *;
+
+.exCard {
+  width: 30rem;
+  height: 30rem;
+  background-color: #fff;
+  border-radius: $radius;
+  padding: 1rem 2rem;
+  position: relative;
+
+  @include flex(center, center, column);
+  box-shadow: 0 0 5px 2px $alpha-1;
+
+  transition: box-shadow $x3 $ttf;
+
+  img {
+    width: 80%;
+  }
+
+  &__tag {
+    border: none;
+    outline: none;
+
+    padding: 5px 8px;
+    border-radius: $radius * 2;
+    text-transform: capitalize;
+    font-family: $font2;
+
+    &:first-child {
+      background-color: $red-500;
+      color: #eee;
+      margin: 1rem;
+    }
+
+    &:last-child {
+      color: #444;
+      background-color: $yellow;
+    }
+  }
+
+  &__name {
+    color: $black;
+    text-align: center;
+  }
+
+  &:hover {
+    box-shadow: 0 0 5px 5px $alpha-1;
+  }
+}
