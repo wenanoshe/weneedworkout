@@ -7,16 +7,17 @@ html {
 }
 
 body {
+  width: 100%;
   font-size: 1.6rem;
   font-family: $font;
   background-color: $white;
   color: $black;
-  max-width: map-get($breakpoints, "desktop-wide");
-  @include flex(center);
+  @include flex(center, center);
 }
 
 #root {
   width: 100%;
+  max-width: map-get($breakpoints, "desktop-wide");
 }
 
 a {
@@ -33,6 +34,10 @@ img {
   box-sizing: border-box;
 }
 
-// ::-webkit-scrollbar {
-//   width: 5px;
-// }
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

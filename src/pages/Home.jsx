@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StartBanner, SearchExercises, Exercises } from "../components";
 
+const initExercises = JSON.parse(localStorage.getItem("EXERCISES")) || [];
+
 const Home = () => {
-  const [bodyPart, setBodyPart] = useState("");
-  const [exercises, setExercises] = useState([]);
+  const [bodyPart, setBodyPart] = useState("all");
+  const [exercises, setExercises] = useState(initExercises);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (!exercises.error) {
+      localStorage.setItem("EXERCISES", JSON.stringify(exercises));
+    }
+  }, [exercises]);
 
   return (
     <main>

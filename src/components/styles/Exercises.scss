@@ -29,36 +29,5 @@
   &__navigation {
     @include flex(center, center, false, 2rem);
     font-family: $font2;
-
-    svg {
-      fill: $red-500;
-      transform: translate(-3px, -2px);
-    }
-
-    button {
-      width: max-content;
-      border: none;
-      border-radius: $radius;
-      background-color: inherit;
-
-      padding: 0.5rem;
-      @include flex(center, center);
-
-      cursor: pointer;
-
-      transition: background-color $x3;
-
-      &:hover {
-        background-color: $red-500;
-
-        svg {
-          fill: $white;
-        }
-      }
-
-      &:last-child {
-        transform: rotate(180deg);
-      }
-    }
   }
 }

@@ -1,12 +1,12 @@
 @use "../../styles/" as *;
 
 .sb {
-  margin: 1rem 5% 0;
+  margin: 1rem 0 0 5%;
   height: max-content;
-  @include flex(space-between, center);
+  @include flex(space-between, center, false, 5%);
 
   &__legend {
-    transform: translateY(-10rem);
+    transform: translateY(-20rem);
   }
 
   &__h3 {
@@ -53,6 +53,7 @@
   }
 
   &__img {
+    margin-left: auto;
     position: relative;
     z-index: -10;
     top: 0;
@@ -75,6 +76,7 @@
   @media screen and (max-width: 1000px) {
     & {
       justify-content: center;
+      margin-right: 5%;
     }
 
     &__legend {

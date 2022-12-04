@@ -1,0 +1,71 @@
+@use "../../styles/" as *;
+
+.details {
+  margin-top: 3rem;
+  @include flex(center, center, false, 10%);
+
+  &__img {
+    box-shadow: 0 0 5px 5px $alpha-1;
+    border-radius: $radius;
+  }
+
+  &__data {
+    max-width: 50rem;
+    height: 100%;
+    padding: 1.5rem 0;
+    @include flex(false, false, column, 3rem);
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    text-transform: capitalize;
+  }
+
+  &__tags {
+    text-transform: capitalize;
+    @include flex(false, false, column, 1rem);
+  }
+
+  &__tag {
+    display: inline-block;
+    width: max-content;
+    font-size: 1.4rem;
+    padding: 5px 1rem;
+    @include flex(false, center, false, 1rem);
+    border-radius: $radius * 3;
+    font-family: $font2;
+    font-weight: 600;
+
+    &:first-child {
+      background-color: $blue;
+    }
+
+    &:nth-child(2) {
+      background-color: $red-500;
+    }
+
+    &:last-child {
+      background-color: $yellow;
+    }
+
+    img {
+      width: 2rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    &__img {
+      width: 40%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    & {
+      flex-direction: column;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}

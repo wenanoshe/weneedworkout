@@ -31,10 +31,18 @@
     @include flex(center, center, column, 2rem);
     transition: transform $x3 $ttf, margin-right $x3 $ttf, box-shadow $x3 $ttf;
 
-    &:hover {
+    &:active {
       transform: rotate(0) translate(1rem, 1rem);
       box-shadow: -10px 10px 10px 10px $alpha-1;
       margin-right: 3rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      &:hover {
+        transform: rotate(0) translate(1rem, 1rem);
+        box-shadow: -10px 10px 10px 10px $alpha-1;
+        margin-right: 3rem;
+      }
     }
   }
 

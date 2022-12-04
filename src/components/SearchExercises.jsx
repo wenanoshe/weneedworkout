@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./styles/SearchExercises.scss";
 
-import { helpHttp } from "../helpers/helpHttp.js";
+import { getExercises } from "../utils/getExercises";
 
 import HorizontalScrollbar from "./HorizontalScrollbar";
 
@@ -29,20 +29,11 @@ export const SearchExercises = ({ setExercises, setBodyPart, setLoading }) => {
     e.preventDefault();
     setLoading(true);
 
-    const URL = "https://exercisedb.p.rapidapi.com/exercises";
-
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": import.meta.env.VITE_RAPIDAPI_KEY,
-        "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
-      },
-    };
-
     window.scrollTo({ top: 1450, left: 100, behavior: "smooth" });
 
     if (search) {
-      const exercisesData = await helpHttp().get(URL, options);
+      // Verify if there is data located in localStorage
+      let exercisesData = await getExercises();
 
       const searchedExercises = exercisesData.filter(
         (item) =>

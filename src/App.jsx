@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import ExerciseDetails from "./pages/ExerciseDetails";
 import ErrorPage from "./pages/ErrorPage";
 
+import "./styles/index.scss";
+
 const App = () => {
   return (
     <>

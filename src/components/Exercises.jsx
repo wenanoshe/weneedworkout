@@ -3,8 +3,12 @@ import "./styles/Exercises.scss";
 import ghostImage from "../assets/images/ghost-svgrepo-com.svg";
 
 import { ExerciseCard, Loading } from "./index";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowButton } from "./index";
+// import { helpHttp } from "../helpers/helpHttp";
+// import { EXERCISE_DB_URL, EXERCISE_API_OPTIONS  } from "../utils/constants";
+
+import { getExercises } from "../utils/getExercises";
 
 export const Exercises = ({ exercises, setExercises, bodyPart, loading }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,6 +33,25 @@ export const Exercises = ({ exercises, setExercises, bodyPart, loading }) => {
     if (currentPage >= numberOfPages) return;
     setCurrentPage(currentPage + 1);
   };
+
+  /* EFFECTS */
+  useEffect(() => {
+    // Self declared async function to fetch thd data
+    (async () => {
+      let exercisesData = [];
+
+      if (bodyPart === "all") {
+        exercisesData = await getExercises();
+      } else {
+        exercisesData = await helpHttp().get(
+          `${EXERCISE_DB_URL}/bodyPart/${bodyPart}`,
+          EXERCISE_API_OPTIONS
+        );
+      }
+
+      setExercises(exercisesData);
+    })();
+  }, [bodyPart]);
 
   return (
     <div id="exercises" className="exercises">
