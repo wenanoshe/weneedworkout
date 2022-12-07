@@ -6,11 +6,12 @@ export const StartBanner = () => {
   return (
     <div className="sb">
       <div className="sb__legend">
-        <h3 className="sb__h3">Fitness Club</h3>
-        <h1 className="sb__title">Sweat, Smile And Repeat</h1>
-        <p className="sb__description">
+        <h3 className="sb__h3">We need workout</h3>
+        <h1 className="sb__title">Sweet, smile and repeat</h1>
+        <div className="sb__description">
+          Fitness Club <br />
           Check out the most effective exercises personalized to you
-        </p>
+        </div>
         <button className="sb__btn">
           <a href="#exercises">Explore exercises</a>
         </button>

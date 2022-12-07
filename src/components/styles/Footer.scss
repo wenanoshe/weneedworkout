@@ -1,0 +1,24 @@
+@use "../../styles/" as *;
+
+.footer {
+  background-color: $red-500;
+  color: $white;
+  padding: 2rem;
+
+  @include flex(space-between, center);
+
+  &__logo {
+    @include flex(false, center, false, 2rem);
+  }
+
+  &__icons {
+    @include flex;
+    gap: 2rem;
+
+    a:hover,
+    a:active {
+      display: block;
+      transform: scale(1.1);
+    }
+  }
+}

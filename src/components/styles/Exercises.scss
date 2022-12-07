@@ -1,7 +1,7 @@
 @use "../../styles/" as *;
 
 .exercises {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   text-transform: capitalize;
   @include flex(center, center, column);
 

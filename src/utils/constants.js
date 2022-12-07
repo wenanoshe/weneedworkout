@@ -13,7 +13,7 @@ export const EXERCISE_API_OPTIONS = {
 export const YOUTUBE_API_OPTIONS = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": import.meta.env.VITE_RAPIDAPI_KEY,
+    "X-RapidAPI-Key": import.meta.env.VITE_YOUTUBE_KEY,
     "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
   },
 };

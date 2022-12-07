@@ -5,10 +5,9 @@ import ghostImage from "../assets/images/ghost-svgrepo-com.svg";
 import { ExerciseCard, Loading } from "./index";
 import { useEffect, useState } from "react";
 import { ArrowButton } from "./index";
-// import { helpHttp } from "../helpers/helpHttp";
-// import { EXERCISE_DB_URL, EXERCISE_API_OPTIONS  } from "../utils/constants";
 
 import { getExercises } from "../utils/getExercises";
+import { helpHttp } from "../helpers/helpHttp";
 
 export const Exercises = ({ exercises, setExercises, bodyPart, loading }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,8 +15,8 @@ export const Exercises = ({ exercises, setExercises, bodyPart, loading }) => {
   const exercisesPerPage = 9;
   const numberOfPages = Math.ceil(exercises.length / exercisesPerPage);
 
-  const indexOfLastExercise = currentPage * exercisesPerPage; // 1 * 9 = 9
-  const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage; // 9 - 9 = 0
+  const indexOfLastExercise = currentPage * exercisesPerPage;
+  const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
 
   const currentExercises =
     exercises.length > 0

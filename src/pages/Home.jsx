@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { StartBanner, SearchExercises, Exercises } from "../components";
+import { StartBanner, SearchExercises, Exercises, Footer } from "../components";
 
 const initExercises = JSON.parse(localStorage.getItem("EXERCISES")) || [];
 

@@ -7,6 +7,7 @@
   border-radius: $radius;
   padding: 1rem 2rem;
   position: relative;
+  text-transform: capitalize;
 
   @include flex(center, center, column);
   box-shadow: 0 0 5px 2px $alpha-1;
@@ -23,7 +24,6 @@
 
     padding: 5px 8px;
     border-radius: $radius * 2;
-    text-transform: capitalize;
     font-family: $font2;
 
     &:first-child {

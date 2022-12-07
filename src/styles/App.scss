@@ -1,0 +1,30 @@
+@use "./index.scss" as *;
+
+@mixin ellipse($w, $h) {
+  @include pseudo;
+  width: $w;
+  height: $h;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1000px) {
+  #root {
+    position: relative;
+    overflow-x: hidden;
+
+    &::before {
+      @include ellipse(70%, 50rem);
+      top: 20rem;
+      left: -7rem;
+      border: 3px solid $red-500;
+    }
+
+    &::after {
+      @include ellipse(50%, 50rem);
+      top: -5rem;
+      right: -10%;
+      border: 3px solid $yellow;
+    }
+  }
+}

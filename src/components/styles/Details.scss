@@ -63,7 +63,9 @@
     & {
       flex-direction: column;
     }
-
+    &__img {
+      width: 80%;
+    }
     &__title {
       font-size: 2rem;
     }

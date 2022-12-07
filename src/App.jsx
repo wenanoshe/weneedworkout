@@ -9,6 +9,7 @@ import ExerciseDetails from "./pages/ExerciseDetails";
 import ErrorPage from "./pages/ErrorPage";
 
 import "./styles/index.scss";
+import "./styles/App.scss";
 
 const App = () => {
   return (

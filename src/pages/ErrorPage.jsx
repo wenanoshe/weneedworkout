@@ -1,11 +1,18 @@
+import lost from "../assets/images/ghost-svgrepo-com.svg";
+import "./styles/ErrorPage.scss";
+
 export default function ErrorPage() {
   return (
-    <div>
+    <div className="error">
       <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
       <p>
-        <i>404 Not found</i>
+        Sorry, you are lost
+        <br />
+        <i>
+          <b>404</b> Not found
+        </i>
       </p>
+      <img src={lost} alt="ghost svgrepo" />
     </div>
   );
 }
