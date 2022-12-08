@@ -6,8 +6,9 @@ import { ExerciseCard, Loading } from "./index";
 import { useEffect, useState } from "react";
 import { ArrowButton } from "./index";
 
-import { getExercises } from "../utils/getExercises";
+import { getAllExercises } from "../utils/getExercises";
 import { helpHttp } from "../helpers/helpHttp";
+import { EXERCISE_DB_URL, EXERCISE_API_OPTIONS } from "../utils/constants.js";
 
 export const Exercises = ({ exercises, setExercises, bodyPart, loading }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -40,7 +41,7 @@ export const Exercises = ({ exercises, setExercises, bodyPart, loading }) => {
       let exercisesData = [];
 
       if (bodyPart === "all") {
-        exercisesData = await getExercises();
+        exercisesData = await getAllExercises();
       } else {
         exercisesData = await helpHttp().get(
           `${EXERCISE_DB_URL}/bodyPart/${bodyPart}`,

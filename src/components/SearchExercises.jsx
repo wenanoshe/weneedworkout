@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./styles/SearchExercises.scss";
 
-import { getExercises } from "../utils/getExercises";
+import { getAllExercises } from "../utils/getExercises";
 
 import HorizontalScrollbar from "./HorizontalScrollbar";
 
@@ -33,7 +33,7 @@ export const SearchExercises = ({ setExercises, setBodyPart, setLoading }) => {
 
     if (search) {
       // Verify if there is data located in localStorage
-      let exercisesData = await getExercises();
+      let exercisesData = await getAllExercises();
 
       const searchedExercises = exercisesData.filter(
         (item) =>

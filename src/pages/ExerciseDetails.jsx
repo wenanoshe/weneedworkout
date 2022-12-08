@@ -9,7 +9,7 @@ import {
 } from "../utils/constants";
 
 import { Details, ExerciseVideos, SimilarExercises } from "../components";
-import { getExercises } from "../utils/getExercises";
+import { getAllExercises } from "../utils/getExercises";
 
 const ExerciesDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
