@@ -7,5 +7,4 @@ export { ExerciseCard } from "./ExerciseCard";
 export { Loading } from "./Loading";
 export { ArrowButton } from "./ArrowButton";
 export { Details } from "./Details";
-export { SimilarExercises } from "./SimilarExercises";
 export { ExerciseVideos } from "./ExerciseVideos";

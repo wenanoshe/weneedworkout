@@ -8,13 +8,11 @@ import {
   YOUTUBE_API_OPTIONS,
 } from "../utils/constants";
 
-import { Details, ExerciseVideos, SimilarExercises } from "../components";
-import { getAllExercises } from "../utils/getExercises";
+import { Details, ExerciseVideos } from "../components";
 
 const ExerciesDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
   const [exerciseVideos, setExerciseVideos] = useState([]);
-  const [similarExercises, setSimilarExercises] = useState([]);
 
   const { id } = useParams();
 
@@ -53,21 +51,6 @@ const ExerciesDetail = () => {
     };
 
     getExerciseVideos(exerciseDetail.name);
-
-    /** Similar exercises **/
-    const getSimilarExercises = async () => {
-      if (!exerciseDetail.bodyPart) return;
-
-      const allExercises = await getExercises();
-
-      const result = allExercises.filter((ex) =>
-        ex.bodyPart.includes(exerciseDetail.bodyPart)
-      );
-
-      setSimilarExercises(result.slice(0, 4));
-    };
-
-    getSimilarExercises();
   }, [exerciseDetail]);
 
   return (
@@ -77,7 +60,6 @@ const ExerciesDetail = () => {
         exerciseVideos={exerciseVideos}
         name={exerciseDetail.name}
       />
-      <SimilarExercises similarExercises={similarExercises} />
     </div>
   );
 };
