@@ -25,6 +25,7 @@
     padding: 5px 8px;
     border-radius: $radius * 2;
     font-family: $font2;
+    text-transform: capitalize;
 
     &:first-child {
       background-color: $red-500;
