@@ -8,7 +8,7 @@ export const ExerciseVideos = ({ exerciseVideos, name }) => {
     <div className="exerciseVideos">
       <h2 className="exerciseVideos__title">
         Watch <span className="exerciseVideos__span">"{name}"</span> similar
-        exercises
+        Videos
       </h2>
       <div className="exerciseVideos__videos">
         {exerciseVideos.map((video, index) => {
